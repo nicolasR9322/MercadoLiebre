@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %> 
+<body>
+    <%- include("./partials/header") %> 
+    <main>
+        <form action="">
+            <label for="">Nombre:</label>
+            <input type="text" name="nombre" placeholder="">
+            <span class="error-message">Introduzca un nombre valido</span>
+
+            <label for="">Apellido:</label>
+            <input type="text" name="apellido">
+            <span class="error-message">Introduzca un apellido valido</span>
+
+            <label for="">Nombre de usuari@:</label>
+            <input type="text" name="usuario">
+            <span class="error-message">Introduzca un nombre de usuari@ valido</span>
+
+            <label for="">Fecha de nacimiento:</label>
+            <input type="date" name="nacimiento">
+            <span class="error-message">Introduzca una fecha de nacimiento valido</span>
+
+            <label for="">Domicilio:</label>
+            <input type="text" name="domicilio">
+            <span class="error-message">Introduzca un domicilio valido</span>
+
+            <label for="">Perfil de usuario:</label>
+            <input type="text" name="perfil-usuario">
+            <span class="error-message">Introduzca un perfil valido</span>
+
+            
+        <div>
+            <label for="">Categoria de interes:</label>
+            
+            <input type="checkbox" name="interes" id="">
+            <label for="">Electro</label>
+            
+            <input type="checkbox" name="interes" id="">
+            <label for="">Moda</label>
+            
+            <input type="checkbox" name="interes" id="">
+            <label for="">Hogar</label>
+            
+            <input type="checkbox" name="interes" id="">
+            <label for="">Jugueteria</label>
+            
+            <input type="checkbox" name="interes" id="">
+            <label for="">Vida sana</label>
+        </div>
+            <label for="">Foto de usuario:</label>
+            <input type="file" name="foto" >
+            <span class="error-message">Introduzca un foto valida</span>
+
+            <label for="">Contraseña:</label>
+            <input type="password" name="password">
+            <span class="error-message">Introduzca una contraseña valida</span>
+
+            <label for="">Confirmar contraseña:</label>
+            <input type="password" name="confirmar-password">
+            <span class="error-message">Confirme contraseña por favor</span>
+
+            <button type="submit"><a href="/home">Enviar</a></button>
+            <button type="reset">Borrar</button>
+        </form>
+    </main>
+    <%- include("./partials/footer") %> 
+<script src="https://kit.fontawesome.com/ce970c0111.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,17 +1,22 @@
 const express = require("express")
 const app = express()
 const path = require("path")
-const PORT = 3000
+const PORT = 3030
+
+// public
 app.use(express.static("public"))
 
-app.get("/", (req,res) => {
-    return res.sendFile(path.join(__dirname, "/views/home.html"))
-})
-app.get("/home", (req, res) => {
-    return res.sendFile(path.join(__dirname, "/views/home.html"))
-})
+// template engine
+app.set("view engine", "ejs")
+app.set("views", path.join(__dirname, "/views"))
 
-app.get("/forms", (req, res) => {
+// routers
+const indexRouter = require("./routes/indexRouter");
+
+// routes
+app.use("/", indexRouter);
+
+/* app.get("/forms", (req, res) => {
     return res.sendFile(path.join(__dirname, "/views/forms.html"))
 })
 
@@ -21,9 +26,10 @@ app.get("/register", (req, res) => {
 
 app.get("/login", (req, res) => {
     return res.sendFile(path.join(__dirname, "/views/login.html"))
-})
+}) */
 
 
+//  ENTRY POINT
 app.listen(PORT, () => {
     console.log(`Servidor levantado en puerto ${PORT} http://localhost:${PORT}`);
 })

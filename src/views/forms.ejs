@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %> 
+<body>
+    <%- include("./partials/header") %> 
+    <main>
+        <form action="/createProduct" method="post" class="create-form">
+            <div class="control-formulario">
+                <label>
+                    Nombre del producto:
+                    <input type="text" name="nombre" class="control">
+                </label>
+            </div>
+            <div class="control-formulario">
+                <label>
+                    precio del producto:
+                    <input type="number" name="precio" placeholder="123.56" class="control" class="control">
+                </label>
+            </div>
+            <div class="control-formulario">
+                <label>
+                    ¿Está en oferta?
+                    <input type="radio" name="enOferta" >
+                </label>
+            </div>
+            <div class="control-formulario">
+                <label>
+                    Categoria:
+                    <select name="categoria">
+                        <option value="hogar">Hogar</option>
+                        <option value="electro">Electro</option>
+                        <option value="indumentaria">Indumentaria</option>
+                    </select>
+                </label>
+            </div>
+            <div class="control-formulario">
+                <label>
+                    Ciudad:
+                    <select name="categoria">
+                        <option value="baires">Buenos Aires</option>
+                        <option value="ros">Rosario</option>
+                        <option value="mdz">Mendoza</option>
+                    </select>
+                </label>
+            </div>
+            <div class="control-formulario">
+                <label for="">
+                    Descripcion:
+                <textarea name="descripcion" class="control"></textarea>
+            </label>
+            </div>
+            <button type="reset" class="boton-formulario">Borrar</button>
+            <button type="submit" class="boton-formulario">Guardar</button>
+        </form>
+    </main>
+    <%- include("./partials/footer") %> 
+<script src="https://kit.fontawesome.com/ce970c0111.js" crossorigin="anonymous"></script>
+</body>
+</html>
